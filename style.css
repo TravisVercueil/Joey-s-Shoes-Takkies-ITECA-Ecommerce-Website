@@ -1,0 +1,133 @@
+body{
+    background-color: white;
+    font-family: system-ui;
+}
+.container{
+    width: 900px;
+    margin: auto;
+    transition: 0.5s;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 50px;
+}
+header .shop{
+    position: relative;
+    text-align: right;
+}
+header .shop img{
+    width: 40px;
+}
+header .shop span{
+    background: cyan;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: -7px;
+    left: 80%;
+    padding: 1px 7px;
+}
+.list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+.list .item{
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 50px 50px grey;
+    letter-spacing: 1px;
+}
+.list .item img{
+    width: 90%;
+}
+.list .item .title{
+    font-weight: 600;
+    font-weight: bold;
+}
+.list .item .price{
+    margin: 10px;
+    font-weight: bold;
+}
+.list .item button{
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 10px;
+}
+.cart{
+    position: fixed;
+    top:0;
+    left: 100%;
+    width: 500px;
+    background-color: grey;
+    height: 100vh;
+    transition: 0.5s;
+}
+.active .cart{
+    left: calc(100% - 500px);
+}
+.active .container{
+   transform: translateX(-200px);
+}
+.cart h1{
+    color: white;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.cart .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.cart .checkOut div{
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    color:white;
+}
+.cart .checkOut div:nth-child(2){
+    background-color: white;
+    color: black
+}
+.listCart li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: white;
+    row-gap: 10px;
+}
+.listCart li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCart li img{
+    width: 90%;
+}
+.listCart li button{
+    background-color: grey;
+    border: none;
+}
+.listCart .count{
+    margin: 0 10px;
+}
