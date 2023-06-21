@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <meta name="view" content="width = device-width, initial-scale = 1.0" />
+  </head>
+  <!-- We are creating our classes and headings used on the website -->
+  <body class="">
+    <div class="container">
+      <header>
+        <h1>Joey's Shoes & Takkies</h1>
+        <!-- User picture and Shopping cart -->
+        <div class="profile-actions">
+          <div class="open-modal">
+            <img class="user-img" src="image/user.png" />
+          </div>
+          <div class="shop">
+            <img src="image/shopping_cart.jpg" />
+            <span class="quantity">0</span>
+          </div>
+        </div>
+      </header>
+      <div class="list"></div>
+    </div>
+    <!-- Creating our cart class that will be used to add items and remove items from our shopping cart -->
+    <div class="cart">
+      <h1>Your Cart</h1>
+      <ul class="listCart"></ul>
+      <div class="checkOut">
+        <div class="total">0</div>
+        <div class="closeCart">Close</div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+    <script src="js/shoppingCart.js"></script>
+    <script></script>
+  </body>
+
+  <!--Modal Here-->
+
+  <!-- Login / Register modal -->
+  <div id="open_modal" class="modal">
+    <div class="modal-inner">
+      <div class="form-holder">
+        <div class="close-btn">X</div>
+        <form id="login_form">
+          <h2>Login</h2>
+          <div class="field-group">
+            <label for="login_email">Email:</label>
+            <input type="email" id="login_email" name="email" required />
+          </div>
+
+          <div class="field-group">
+            <label for="login_password">Password:</label>
+            <input
+              type="password"
+              id="login_password"
+              name="password"
+              required
+            />
+          </div>
+
+          <button class="login-btn" type="submit">Login</button>
+        </form>
+
+        <form id="register_form">
+          <h2>Register</h2>
+          <div class="field-group">
+            <label for="register_email">Email:</label>
+            <input
+              type="email"
+              id="register_email"
+              name="email"
+              required
+            /><br />
+          </div>
+
+          <div class="field-group">
+            <label for="register_password">Password:</label>
+            <input
+              type="password"
+              id="register_password"
+              name="password"
+              required
+            />
+          </div>
+
+          <button class="login-btn" type="submit">Regsiter Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</html>
